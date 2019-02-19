@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Find The Digit</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="the_selected_image_will_be_displayed_here">The selected image will be displayed here</string>
+</resources>

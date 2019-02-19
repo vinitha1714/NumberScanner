@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="784px">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="784px"
+        android:contentDescription="@string/the_selected_image_will_be_displayed_here"/>
+       <TextView
+           android:id="@+id/myImageViewText"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="1dp"
+           android:text="The selected image will be displayed here"
+           android:gravity="center"
+           android:layout_alignLeft="@+id/image"
+           android:layout_alignTop="@+id/image"
+           android:layout_alignRight="@+id/image"
+           android:textColor="#000000"/>
+   </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle"
+            android:drawableTop="@android:drawable/ic_menu_camera"
+            android:paddingTop="20dp"
+            android:text="@string/camera"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle"
+            android:drawableTop="@android:drawable/ic_menu_gallery"
+            android:layout_marginTop="40dp"
+            android:paddingTop="20dp"
+            android:text="@string/gallery"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+</LinearLayout>
