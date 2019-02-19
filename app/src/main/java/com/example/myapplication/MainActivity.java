@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }else if (requestCode == REQUEST_IMAGE_GALLEY){
                 Uri uri = data.getData();
                 String x = getPath(uri);
-                Toast.makeText(getApplicationContext(),x,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),x,Toast.LENGTH_LONG).show();
                 Bitmap bitmap = null;
                 try{
                     bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
