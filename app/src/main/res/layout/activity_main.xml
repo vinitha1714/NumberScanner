@@ -9,12 +9,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="200dp">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="200dp"
             android:contentDescription="@string/the_selected_image_will_be_displayed_here" />
 
         <TextView
@@ -29,6 +29,16 @@
             android:text="The selected image will be displayed here"
             android:textColor="#000000" />
     </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/circularbar"
+        android:max="100"
+        android:progress="20"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
