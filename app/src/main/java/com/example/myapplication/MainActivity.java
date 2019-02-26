@@ -17,7 +17,7 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView image;
-    private Button camera,gallery;
+    private Button camera, gallery, scan;
     private final int REQUEST_IMAGE_CAPTURE=1,REQUEST_IMAGE_GALLEY=2;
 
 
@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         camera.setOnClickListener(this);
         gallery = (Button)findViewById(R.id.gallery);
         gallery.setOnClickListener(this);
-
+        scan = (Button)findViewById(R.id.scanButton);
+        scan.setEnabled(false);
     }
 
     @Override
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 iGallery.setType("image/'");
                 startActivityForResult(iGallery,REQUEST_IMAGE_GALLEY);
                 break;
+            case R.id.scanButton:
+                break;
         }
 
     }
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(requestCode == REQUEST_IMAGE_CAPTURE){
                 Bitmap bitmap = (Bitmap) data.getExtras().get("data");
                 image.setImageBitmap(bitmap);
+                scan.setEnabled(true);
             }else if (requestCode == REQUEST_IMAGE_GALLEY){
                 Uri uri = data.getData();
                 String x = getPath(uri);
@@ -66,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 try{
                     bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
                     image.setImageBitmap(bitmap);
+                    scan.setEnabled(true);
                 }catch (IOException e){
                     e.printStackTrace();
                 }
