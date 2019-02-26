@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivityForResult(iGallery,REQUEST_IMAGE_GALLEY);
                 break;
             case R.id.scanButton:
+                Toast.makeText(this, "Scan Button Clicked",Toast.LENGTH_SHORT).show();
                 break;
         }
 
