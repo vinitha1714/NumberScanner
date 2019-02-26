@@ -9,35 +9,50 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="300dp">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="300dp"
             android:contentDescription="@string/the_selected_image_will_be_displayed_here" />
 
         <TextView
             android:id="@+id/myImageViewText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/image"
-            android:layout_alignTop="@+id/image"
-            android:layout_alignRight="@+id/image"
             android:layout_margin="1dp"
             android:gravity="center"
             android:text="The selected image will be displayed here"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:layout_alignLeft="@+id/image"
+            android:layout_alignRight="@+id/image"
+            android:layout_alignTop="@+id/image"/>
     </RelativeLayout>
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_gravity="center"
-        android:indeterminateDrawable="@drawable/circularbar"
-        android:max="100"
-        android:progress="20"/>
+
+        <Button
+            android:id="@+id/scanButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_alignLeft="@+id/image"
+            android:layout_alignRight="@+id/image"
+            android:layout_alignBottom="@+id/image"
+            android:background="@drawable/buttonbgr"
+            android:text="Scan"
+            android:textColor="#fff" />
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progressBar"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--style="?android:attr/progressBarStyleLarge"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:indeterminateDrawable="@drawable/circularbar"-->
+        <!--android:max="100"-->
+        <!--android:progress="20"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,6 +68,7 @@
             android:drawableTop="@android:drawable/ic_menu_camera"
             android:paddingTop="20dp"
             android:text="@string/camera"
+            android:layout_marginTop="10dp"
             android:textColor="#fff" />
 
         <Button
